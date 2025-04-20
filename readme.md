@@ -14,7 +14,7 @@ O modelo do banco de dados foi desenvolvido utilizando o [dbdiagram.io](https://
 ## Planejamento de Sprint
 
 ![Planejamento de Sprint]()
-O planejamento de Sprint foi desenvolvido utilizando o [Github Projects]()
+O planejamento de Sprint foi desenvolvido utilizando o [Github Projects](https://github.com/users/lpn-leandro/projects/5/views/1)
 
 ## Ambiente de desenvolvimento e ferramentas
 
