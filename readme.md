@@ -31,14 +31,14 @@ Protótipos das telas do app, desenvolvidos no Figma.
 
 ## Modelagem do Banco de Dados
 
-![Modelo do banco de dados](https://dbdiagram.io/d/68056e241ca52373f5aa1220)
+[Modelo do banco de dados](https://dbdiagram.io/d/Contas-a-pagar-68056e241ca52373f5aa1220)
 O modelo do banco de dados foi desenvolvido utilizando o [dbdiagram.io](https://dbdiagram.io/home).
 
 ---
 
 ## Planejamento de Sprint
 
-![Planejamento de Sprint]()
+[Planejamento de Sprint]()
 O planejamento de Sprint foi desenvolvido utilizando o [Github Projects](https://github.com/users/lpn-leandro/projects/5/views/1)
 
 ---
