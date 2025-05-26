@@ -1,11 +1,11 @@
 import { Text, TouchableOpacityProps, TouchableOpacity } from 'react-native';
 import React from 'react';
 
-type FormInput = {
+type FormInputProps = {
   title: string;
 } & TouchableOpacityProps;
 
-export default function FormButton({ title, ...rest }: FormInput) {
+export default function FormButton({ title, ...rest }: FormInputProps) {
   return (
     <TouchableOpacity
       className='mt-4 bg-[#0F172A] rounded-md p-4 w-full max-h-[50px]'
