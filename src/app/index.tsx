@@ -17,7 +17,7 @@ export default function index() {
     if (email === 'teste' && password === '123') router.push('#');
   };
   const handleRegister = () => {
-    router.push('#');
+    //router.push('');
   };
 
   return (
