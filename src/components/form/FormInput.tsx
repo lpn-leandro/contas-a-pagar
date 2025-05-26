@@ -14,7 +14,7 @@ type FormInput = {
 export default function FormInput({ label, ...rest }: FormInput) {
   return (
     <>
-      <Text className='text-x mb-1 strong'>{label}</Text>
+      <Text className='text-base mb-1 strong'>{label}</Text>
       <View className='mb-3 p-1 border-slate-300 border rounded-lg max-w-full max-h-100% h-13'>
         <TextInput {...rest} />
       </View>
