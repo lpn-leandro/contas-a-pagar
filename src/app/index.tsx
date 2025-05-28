@@ -10,11 +10,12 @@ import './global.css';
 export default function index() {
   const router = useRouter();
 
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('teste@teste.teste');
+  const [password, setPassword] = useState('123');
 
   const handleLogin = () => {
-    if (email === 'teste' && password === '123') router.push('#');
+    if (email === 'teste@teste.teste' && password === '123')
+      router.push('/home');
   };
   const handleRegister = () => {
     //router.push('');
