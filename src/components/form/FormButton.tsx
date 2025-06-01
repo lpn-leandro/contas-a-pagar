@@ -8,7 +8,7 @@ type FormInputProps = {
 export default function FormButton({ title, ...rest }: FormInputProps) {
   return (
     <TouchableOpacity
-      className='mt-4 bg-[#0F172A] rounded-md p-4 w-full max-h-[50px]'
+      className='mt-4 bg-[#0F172A] rounded-md h-[2.5rem] w-full max-h-[3.4rem]'
       {...rest}
     >
       <Text className='text-white m-auto text-base'>{title}</Text>

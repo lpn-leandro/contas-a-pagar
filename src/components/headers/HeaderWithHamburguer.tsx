@@ -54,7 +54,7 @@ export default function HeaderWithHamburguer({
         title,
         headerRight: () => (
           <Pressable className='mr-2' onPress={() => handlePress(title)}>
-            <AntDesign name='menu-fold' size={25} color='black'></AntDesign>
+            <AntDesign name='user' size={25} color='black'></AntDesign>
           </Pressable>
         ),
       }}

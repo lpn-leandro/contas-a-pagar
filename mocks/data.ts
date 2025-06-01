@@ -2,7 +2,7 @@ export const data = [
   {
     id: 1,
     title: 'Internet',
-    value: '$225.52',
+    value: '225.52',
     user_id: 1,
     is_paid: true,
     due_date: '25/07/2025',
@@ -11,7 +11,7 @@ export const data = [
   {
     id: 2,
     title: 'Phone',
-    value: '$567.63',
+    value: '567.63',
     user_id: 2,
     is_paid: true,
     due_date: '31/10/2025',
@@ -20,7 +20,7 @@ export const data = [
   {
     id: 3,
     title: 'Gas',
-    value: '$717.51',
+    value: '717.51',
     user_id: 3,
     is_paid: true,
     due_date: '20/08/2025',
@@ -29,7 +29,7 @@ export const data = [
   {
     id: 4,
     title: 'Electricity',
-    value: '$137.90',
+    value: '137.90',
     user_id: 4,
     is_paid: true,
     due_date: '10/06/2025',
@@ -38,7 +38,7 @@ export const data = [
   {
     id: 5,
     title: 'Electricity',
-    value: '$897.14',
+    value: '897.14',
     user_id: 5,
     is_paid: true,
     due_date: '22/08/2025',
@@ -47,7 +47,7 @@ export const data = [
   {
     id: 6,
     title: 'Phone',
-    value: '$670.06',
+    value: '670.06',
     user_id: 6,
     is_paid: true,
     due_date: '16/09/2025',
@@ -56,7 +56,7 @@ export const data = [
   {
     id: 7,
     title: 'Phone',
-    value: '$694.31',
+    value: '694.31',
     user_id: 7,
     is_paid: true,
     due_date: '24/09/2025',
@@ -65,7 +65,7 @@ export const data = [
   {
     id: 8,
     title: 'Electricity',
-    value: '$42.73',
+    value: '42.73',
     user_id: 8,
     is_paid: false,
     due_date: '27/08/2025',
@@ -74,7 +74,7 @@ export const data = [
   {
     id: 9,
     title: 'Phone',
-    value: '$821.68',
+    value: '821.68',
     user_id: 9,
     is_paid: false,
     due_date: '29/08/2025',
@@ -83,10 +83,28 @@ export const data = [
   {
     id: 10,
     title: 'Phone',
-    value: '$118.80',
+    value: '118.80',
     user_id: 10,
     is_paid: true,
     due_date: '08/07/2025',
+    created_at: '6/1/2025',
+  },
+  {
+    id: 11,
+    title: 'Internet',
+    value: '100.00',
+    user_id: 11,
+    is_paid: false,
+    due_date: '15/07/2025',
+    created_at: '6/1/2025',
+  },
+  {
+    id: 12,
+    title: 'Gas',
+    value: '200.00',
+    user_id: 12,
+    is_paid: false,
+    due_date: '20/07/2025',
     created_at: '6/1/2025',
   },
 ];
