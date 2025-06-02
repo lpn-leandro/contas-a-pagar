@@ -1,9 +1,9 @@
 import { Text, View } from 'react-native';
 import React from 'react';
-import Scrollable from '../components/containers/Scrollable';
-import HeaderWithHamburguer from '../components/headers/HeaderWithHamburguer';
-import BillList from '../components/list/BillList';
-import FormButton from '../components/form/FormButton';
+import Scrollable from '../../components/containers/Scrollable';
+import HeaderWithHamburguer from '../../components/headers/HeaderWithHamburguer';
+import BillList from '../../components/list/BillList';
+import FormButton from '../../components/form/FormButton';
 
 export default function home() {
   return (
