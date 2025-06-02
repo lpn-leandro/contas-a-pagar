@@ -1,11 +1,6 @@
 import React from 'react';
-import { Stack } from 'expo-router';
-import { ActionSheetProvider } from '@expo/react-native-action-sheet';
+import { Slot } from 'expo-router';
 
 export default function _layout() {
-  return (
-    <ActionSheetProvider>
-      <Stack />
-    </ActionSheetProvider>
-  );
+  return <Slot />;
 }
