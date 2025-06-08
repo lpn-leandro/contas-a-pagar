@@ -1,9 +1,10 @@
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import React from 'react';
 import Scrollable from '../../components/containers/Scrollable';
 import HeaderWithHamburguer from '../../components/headers/HeaderWithHamburguer';
 import BillList from '../../components/list/BillList';
 import FormButton from '../../components/form/FormButton';
+import { router } from 'expo-router';
 
 export default function home() {
   return (
@@ -16,7 +17,12 @@ export default function home() {
       />
       <BillList />
       <View className='w-[60%] absolute bottom-[8%] left-[20%] right-[20%]'>
-        <FormButton title='NOVA CONTA' />
+        <FormButton
+          title='NOVA CONTA'
+          onPress={() => {
+            router.navigate('/home/registerBill/');
+          }}
+        />
       </View>
     </Scrollable>
   );
