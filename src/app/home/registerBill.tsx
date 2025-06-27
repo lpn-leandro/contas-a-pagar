@@ -22,14 +22,24 @@ export default function registerBill() {
         Nova conta a pagar
       </Text>
 
-      <FormInput label='Nome:' value={name} onChangeText={setName} />
+      <FormInput
+        placeholder='Conta de Luz'
+        label='Nome:'
+        value={name}
+        onChangeText={setName}
+      />
 
-      <FormInput label='Valor:' value={value} onChangeText={setValue} />
+      <FormInput
+        placeholder='R$ 200'
+        label='Valor:'
+        value={value}
+        onChangeText={setValue}
+      />
 
       <View className='mb-3'>
         <FormInput
           label='Data de vencimento:'
-          placeholder='01/01/2001'
+          placeholder='20/01/2022'
           value={due_date}
           onChangeText={setDueDate}
           onFocus={() => setShowPicker(true)}
@@ -61,17 +71,20 @@ export default function registerBill() {
       </View>
 
       <FormInput
+        placeholder='Insira uma breve descrição sobre a conta'
         label='Descrição:'
         value={description}
         onChangeText={setDescription}
       />
 
-      <FormButton
-        title='Criar'
-        onPress={() => {
-          router.back();
-        }}
-      />
+      <View className='flex-1 justify-end mb-4'>
+        <FormButton
+          title='Criar'
+          onPress={() => {
+            router.back();
+          }}
+        />
+      </View>
     </View>
   );
 }
