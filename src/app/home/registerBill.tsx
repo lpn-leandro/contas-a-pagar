@@ -4,11 +4,14 @@ import { useRouter } from 'expo-router';
 import FormButton from '../../components/form/FormButton';
 import FormInput from '../../components/form/FormInput';
 import { Picker } from '@react-native-picker/picker';
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 export default function registerBill() {
   const [name, setName] = useState('');
   const [value, setValue] = useState('');
   const [due_date, setDueDate] = useState('');
+  const [date, setDate] = useState(new Date());
+  const [showPicker, setShowPicker] = useState(false);
   const [description, setDescription] = useState('');
   const router = useRouter();
   const [status, setStatus] = useState();
@@ -23,11 +26,28 @@ export default function registerBill() {
 
       <FormInput label='Valor:' value={value} onChangeText={setValue} />
 
-      <FormInput
-        label='Data de Nascimento:'
-        value={due_date}
-        onChangeText={setDueDate}
-      />
+      <View className='mb-3'>
+        <FormInput
+          label='Data de vencimento:'
+          placeholder='01/01/2001'
+          value={due_date}
+          onChangeText={setDueDate}
+          onFocus={() => setShowPicker(true)}
+        />
+        {showPicker && (
+          <DateTimePicker
+            value={date}
+            mode='date'
+            display='spinner'
+            onChange={(event, selectedDate) => {
+              const currentDate = selectedDate || date;
+              setShowPicker(false);
+              setDate(currentDate);
+              setDueDate(currentDate.toLocaleDateString());
+            }}
+          />
+        )}
+      </View>
 
       <Text className='text-base mb-1 strong'>Status da conta:</Text>
       <View className='mb-3 border-slate-300 border rounded-lg max-w-full max-h-full h-13'>
