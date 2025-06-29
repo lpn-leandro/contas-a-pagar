@@ -18,7 +18,7 @@ export default function index() {
       router.replace('/home/');
   };
   const handleRegister = () => {
-    //router.push('');
+    router.navigate('registerUser');
   };
 
   return (
