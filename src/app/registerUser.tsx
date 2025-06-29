@@ -47,7 +47,18 @@ export default function registerUser() {
         <FormButton
           title='Criar'
           onPress={() => {
-            router.replace('/home/');
+            if (
+              name &&
+              email &&
+              password &&
+              passwordVerification &&
+              password === passwordVerification
+            ) {
+              console.log('Usuário registrado:', { name, email, password });
+              router.replace('/home/');
+            } else {
+              console.log('Inserir informações válidas');
+            }
           }}
         />
       </View>
