@@ -1,9 +1,9 @@
 import { View, Text } from 'react-native';
 import React from 'react';
 import { Stack, useGlobalSearchParams } from 'expo-router';
-import HeaderWithHamburguer from '../../../components/headers/HeaderWithHamburguer';
-import { data } from './../../../../mocks/data';
-import FormButton from '../../../components/form/FormButton';
+import HeaderWithHamburguer from '../../components/headers/HeaderWithHamburguer';
+import { data } from '../../../mocks/data';
+import FormButton from '../../components/form/FormButton';
 
 export default function BillDetails() {
   const { id } = useGlobalSearchParams();
