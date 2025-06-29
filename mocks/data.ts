@@ -7,6 +7,7 @@ export const data = [
     is_paid: true,
     due_date: '25/07/2025',
     created_at: '6/1/2025',
+    description: 'Monthly internet bill for June 2025',
   },
   {
     id: 2,
@@ -16,6 +17,7 @@ export const data = [
     is_paid: true,
     due_date: '31/10/2025',
     created_at: '6/1/2025',
+    description: 'Monthly phone bill for June 2025',
   },
   {
     id: 3,
@@ -25,6 +27,7 @@ export const data = [
     is_paid: true,
     due_date: '20/08/2025',
     created_at: '6/1/2025',
+    description: 'Monthly gas bill for June 2025',
   },
   {
     id: 4,
@@ -34,6 +37,7 @@ export const data = [
     is_paid: true,
     due_date: '10/06/2025',
     created_at: '6/1/2025',
+    description: 'Monthly electricity bill for June 2025',
   },
   {
     id: 5,
@@ -43,6 +47,7 @@ export const data = [
     is_paid: true,
     due_date: '22/08/2025',
     created_at: '6/1/2025',
+    description: 'Monthly electricity bill for June 2025',
   },
   {
     id: 6,
@@ -52,6 +57,7 @@ export const data = [
     is_paid: true,
     due_date: '16/09/2025',
     created_at: '6/1/2025',
+    description: 'Monthly phone bill for June 2025',
   },
   {
     id: 7,
@@ -61,6 +67,7 @@ export const data = [
     is_paid: true,
     due_date: '24/09/2025',
     created_at: '6/1/2025',
+    description: 'Monthly phone bill for June 2025',
   },
   {
     id: 8,
@@ -70,6 +77,7 @@ export const data = [
     is_paid: false,
     due_date: '27/08/2025',
     created_at: '6/1/2025',
+    description: 'Monthly electricity bill for June 2025',
   },
   {
     id: 9,
@@ -79,6 +87,7 @@ export const data = [
     is_paid: false,
     due_date: '29/08/2025',
     created_at: '6/1/2025',
+    description: 'Monthly phone bill for June 2025',
   },
   {
     id: 10,
@@ -88,6 +97,7 @@ export const data = [
     is_paid: true,
     due_date: '08/07/2025',
     created_at: '6/1/2025',
+    description: 'Monthly phone bill for June 2025',
   },
   {
     id: 11,
@@ -97,6 +107,7 @@ export const data = [
     is_paid: false,
     due_date: '15/07/2025',
     created_at: '6/1/2025',
+    description: 'Monthly internet bill for June 2025',
   },
   {
     id: 12,
@@ -106,5 +117,6 @@ export const data = [
     is_paid: false,
     due_date: '20/07/2025',
     created_at: '6/1/2025',
+    description: 'Monthly gas bill for June 2025',
   },
 ];
