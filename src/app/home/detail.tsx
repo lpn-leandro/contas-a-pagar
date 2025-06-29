@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { Stack, useGlobalSearchParams } from 'expo-router';
 import HeaderWithHamburguer from '../../components/headers/HeaderWithHamburguer';
@@ -12,13 +12,13 @@ export default function BillDetails() {
   const bill = data.find((item) => String(item.id) === String(id));
 
   return (
-    <View style={{ margin: 10 }}>
+    <View className='m-5'>
       <Stack.Screen
         options={{
           title: 'Bill',
           headerRight: () => (
             <HeaderWithHamburguer
-              title='Home'
+              title=''
               optionsProps={['Perfil', 'Logout', 'Cancelar']}
               destructiveButtonIndex={1}
               cancelButtonIndex={2}
@@ -27,35 +27,38 @@ export default function BillDetails() {
         }}
       />
 
-      <Text className=''>{bill?.title ?? 'N/A'}</Text>
+      <Text className='text-center font-semibold text-xl'>
+        {bill?.title ?? 'N/A'}
+      </Text>
 
-      <FormButton
-        title='Editar'
-        onPress={() => {
-          // Ir para a tela de edição de conta
-        }}
-      />
+      <View className=''>
+        <TouchableOpacity className='mt-4 bg-[#0F172A] rounded-md h-[2.5rem] w-[20%] max-h-[50%]'>
+          <Text className='text-white m-auto text-base'>EDITAR</Text>
+        </TouchableOpacity>
+      </View>
 
-      <View>
-        <Text>Descrição</Text>
-        <Text>Name: {bill?.description ?? 'N/A'}</Text>
-        <View>
-          <View>
-            <Text>Valor</Text>
+      <View className=''>
+        <Text className='font-semibold text-base'>Descrição</Text>
+        <Text className=''>{bill?.description ?? 'N/A'}</Text>
+        <View className='flex-wrap flex-row mt-4 justify-stretch gap-[10%]'>
+          <View className=''>
+            <Text className='font-semibold text-base'>Valor</Text>
             <Text>R$ {bill?.value ?? 'N/A'}</Text>
           </View>
-          <View>
-            <Text>Data de Vencimento</Text>
+          <View className=''>
+            <Text className='font-semibold text-base'>Data de Vencimento</Text>
             <Text>{bill?.due_date ?? 'N/A'}</Text>
           </View>
         </View>
       </View>
-      <FormButton
-        title='Excluir'
-        onPress={() => {
-          // Marcar como pago
-        }}
-      />
+      <View>
+        <FormButton
+          title='MARCAR COMO PAGO'
+          onPress={() => {
+            // Marcar como pago
+          }}
+        />
+      </View>
     </View>
   );
 }
