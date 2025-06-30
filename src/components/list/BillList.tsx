@@ -26,7 +26,7 @@ export default function BillList() {
           className='flex flex-row mb-3 border-slate-300 border-b h-[3rem]'
           key={index}
           href={{
-            pathname: '/home/detail/',
+            pathname: '/(billsToPay)/detail/',
             params: { ...bill, is_paid: bill.is_paid ? 'true' : 'false' },
           }}
         >

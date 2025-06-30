@@ -1,9 +1,9 @@
 import { View, Text, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { router, Stack, useGlobalSearchParams } from 'expo-router';
-import HeaderWithHamburguer from '../../components/headers/HeaderWithHamburguer';
-import { data } from '../../../mocks/data';
-import FormButton from '../../components/form/FormButton';
+import HeaderWithHamburguer from '../../../components/headers/HeaderWithHamburguer';
+import { data } from '../../../../mocks/data';
+import FormButton from '../../../components/form/FormButton';
 
 export default function BillDetails() {
   const { id } = useGlobalSearchParams();
@@ -37,7 +37,7 @@ export default function BillDetails() {
             className='text-white m-auto text-base'
             onPress={() => {
               router.navigate({
-                pathname: '/home/editBill/',
+                pathname: '/(billsToPay)/editBill/',
                 params: { id: bill?.id, title: bill?.title },
               });
             }}

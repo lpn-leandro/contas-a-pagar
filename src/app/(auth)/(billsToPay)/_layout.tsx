@@ -5,16 +5,16 @@ export default function _layout() {
   return (
     <Stack>
       <Stack.Screen
-        name='index'
+        name='home'
         options={{
           headerShown: false,
         }}
       />
       <Stack.Screen
-        name='registerUser'
+        name='detail'
         options={{
           title: 'Novo usuário',
-          headerShown: true,
+          headerShown: false,
         }}
       />
     </Stack>

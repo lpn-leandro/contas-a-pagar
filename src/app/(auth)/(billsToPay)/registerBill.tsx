@@ -1,8 +1,8 @@
 import { View, Text } from 'react-native';
 import React, { useState } from 'react';
 import { useRouter } from 'expo-router';
-import FormButton from '../../components/form/FormButton';
-import FormInput from '../../components/form/FormInput';
+import FormButton from '../../../components/form/FormButton';
+import FormInput from '../../../components/form/FormInput';
 import { Picker } from '@react-native-picker/picker';
 import DateTimePicker from '@react-native-community/datetimepicker';
 
