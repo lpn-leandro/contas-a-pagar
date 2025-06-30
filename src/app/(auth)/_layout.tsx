@@ -1,6 +1,5 @@
 import React from 'react';
-import { Stack, Tabs } from 'expo-router';
-import { ActionSheetProvider } from '@expo/react-native-action-sheet';
+import { Tabs } from 'expo-router';
 
 export default function _layout() {
   return (
@@ -14,7 +13,7 @@ export default function _layout() {
         }}
       />
       <Tabs.Screen
-        name='(billsPayed)'
+        name='billsPayed'
         options={{
           headerShown: false,
           //tabBarIcon: 'plus',

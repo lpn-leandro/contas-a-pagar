@@ -1,14 +1,23 @@
-import { View, Text, FlatList } from 'react-native';
+import { View, Text } from 'react-native';
 import React from 'react';
-import { data } from '../../../mocks/data';
+import { data as allData } from '../../../mocks/data';
 import { Link } from 'expo-router';
 
-export default function BillList() {
+type StatusFilter = 'all' | 'paid' | 'unpaid';
+
+type BillListProps = {
+  statusFilter?: StatusFilter;
+};
+
+export default function BillList({ statusFilter = 'all' }: BillListProps) {
+  const filteredData = allData.filter((bill) => {
+    if (statusFilter === 'paid') return bill.is_paid;
+    if (statusFilter === 'unpaid') return !bill.is_paid;
+    return true;
+  });
+
   return (
     <View className='m-4'>
-      <Text className='text-left font-semibold text-xl mb-4'>
-        Contas a Pagar
-      </Text>
       <View className='flex flex-row mb-6'>
         <Text className='text-left font-semibold text-base basis-3/5'>
           Titulo
@@ -21,7 +30,7 @@ export default function BillList() {
         </Text>
       </View>
 
-      {data.map((bill, index) => (
+      {filteredData.map((bill, index) => (
         <Link
           className='flex flex-row mb-3 border-slate-300 border-b h-[3rem]'
           key={index}

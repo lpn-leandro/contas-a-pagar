@@ -11,8 +11,7 @@ export default function Scrollable({ children }: FullScreenProps) {
     <View className='flex-1 bg-white'>
       <Stack.Screen options={{ headerShown: false }} />
 
-      {/* <ScrollView>{children}</ScrollView> */}
-      <View>{children}</View>
+      <ScrollView>{children}</ScrollView>
     </View>
   );
 }

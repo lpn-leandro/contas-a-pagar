@@ -1,4 +1,4 @@
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 import React from 'react';
 import Scrollable from '../../../components/containers/Scrollable';
 import HeaderWithHamburguer from '../../../components/headers/HeaderWithHamburguer';
@@ -15,7 +15,10 @@ export default function home() {
         destructiveButtonIndex={1}
         cancelButtonIndex={2}
       />
-      <BillList />
+      <Text className='text-left font-semibold text-xl mb-4'>
+        Contas a Pagar
+      </Text>
+      <BillList statusFilter='unpaid' />
       <View className='w-[60%] absolute bottom-[20%] left-[20%] right-[20%]'>
         <FormButton
           title='NOVA CONTA'

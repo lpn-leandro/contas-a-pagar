@@ -1,12 +1,10 @@
-import { View } from 'react-native';
 import React from 'react';
 import Scrollable from '../../components/containers/Scrollable';
 import HeaderWithHamburguer from '../../components/headers/HeaderWithHamburguer';
 import BillList from '../../components/list/BillList';
-import FormButton from '../../components/form/FormButton';
-import { router } from 'expo-router';
+import { Text } from 'react-native';
 
-export default function home() {
+export default function BillsPayed() {
   return (
     <Scrollable>
       <HeaderWithHamburguer
@@ -15,7 +13,8 @@ export default function home() {
         destructiveButtonIndex={1}
         cancelButtonIndex={2}
       />
-      <BillList />
+      <Text className='text-left font-semibold text-xl mb-4'>Contas Pagas</Text>
+      <BillList statusFilter='paid' />
     </Scrollable>
   );
 }
