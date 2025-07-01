@@ -10,14 +10,11 @@ export default function home() {
   return (
     <Scrollable>
       <HeaderWithHamburguer
-        title='Home'
+        title='Contas a Pagar'
         optionsProps={['Perfil', 'Logout', 'Cancelar']}
         destructiveButtonIndex={1}
         cancelButtonIndex={2}
       />
-      <Text className='text-left font-semibold text-xl mb-4'>
-        Contas a Pagar
-      </Text>
       <BillList statusFilter='unpaid' />
       <View className='w-[60%] absolute bottom-[20%] left-[20%] right-[20%]'>
         <FormButton
