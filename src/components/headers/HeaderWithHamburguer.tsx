@@ -2,7 +2,7 @@ import { Pressable } from 'react-native';
 import React from 'react';
 import { Stack, useRouter } from 'expo-router';
 import { useActionSheet } from '@expo/react-native-action-sheet';
-import { AntDesign } from '@expo/vector-icons';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 type HeaderWithHamburguerProps = {
   title: string;
@@ -54,7 +54,11 @@ export default function HeaderWithHamburguer({
         title,
         headerRight: () => (
           <Pressable className='mr-2' onPress={() => handlePress(title)}>
-            <AntDesign name='user' size={25} color='black'></AntDesign>
+            <MaterialCommunityIcons
+              name='account-circle-outline'
+              size={25}
+              color='black'
+            />
           </Pressable>
         ),
       }}

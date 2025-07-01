@@ -4,7 +4,7 @@ export const data = [
     title: 'Internet',
     value: '225.52',
     user_id: 1,
-    is_paid: false,
+    is_paid: true,
     due_date: '25/07/2025',
     created_at: '6/1/2025',
     description: 'Monthly internet bill for June 2025',

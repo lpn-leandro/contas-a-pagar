@@ -1,25 +1,19 @@
 import React from 'react';
-import { Stack } from 'expo-router';
+import { Slot, Stack } from 'expo-router';
 
 export default function _layout() {
   return (
     <Stack>
       <Stack.Screen
-        name='index'
+        name='home'
         options={{
           headerShown: false,
         }}
       />
       <Stack.Screen
-        name='registerUser'
+        name='detail'
         options={{
           title: 'Novo usuário',
-          headerShown: true,
-        }}
-      />
-      <Stack.Screen
-        name='(auth)'
-        options={{
           headerShown: false,
         }}
       />

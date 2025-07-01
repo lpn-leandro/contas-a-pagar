@@ -1,11 +1,11 @@
 import { View, Text } from 'react-native';
 import React, { useState } from 'react';
 import { useGlobalSearchParams, useRouter } from 'expo-router';
-import FormButton from '../../components/form/FormButton';
-import FormInput from '../../components/form/FormInput';
+import FormButton from '../../../components/form/FormButton';
+import FormInput from '../../../components/form/FormInput';
 import { Picker } from '@react-native-picker/picker';
 import DateTimePicker from '@react-native-community/datetimepicker';
-import { data } from '../../../mocks/data';
+import { data } from '../../../../mocks/data';
 
 export default function editBill() {
   const { id } = useGlobalSearchParams();
