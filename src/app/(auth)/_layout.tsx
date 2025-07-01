@@ -1,5 +1,7 @@
 import React from 'react';
 import { Tabs } from 'expo-router';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 
 export default function _layout() {
   return (
@@ -8,7 +10,9 @@ export default function _layout() {
         name='(billsToPay)'
         options={{
           headerShown: false,
-          //tabBarIcon: 'home',
+          tabBarIcon: () => (
+            <MaterialIcons name='bookmark-outline' size={24} color='black' />
+          ),
           title: 'Contas a pagar',
         }}
       />
@@ -16,7 +20,13 @@ export default function _layout() {
         name='billsPayed'
         options={{
           headerShown: false,
-          //tabBarIcon: 'plus',
+          tabBarIcon: () => (
+            <MaterialCommunityIcons
+              name='bell-outline'
+              size={24}
+              color='black'
+            />
+          ),
           title: 'Contas pagas',
         }}
       />
