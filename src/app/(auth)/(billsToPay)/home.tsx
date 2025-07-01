@@ -20,7 +20,7 @@ export default function home() {
         <FormButton
           title='NOVA CONTA'
           onPress={() => {
-            router.navigate('/registerBill/');
+            router.navigate('/(auth)/(billsToPay)/registerBill');
           }}
         />
       </View>

@@ -30,9 +30,9 @@ export default function BillList({ statusFilter = 'all' }: BillListProps) {
         </Text>
       </View>
 
-      {filteredData.map((bill, index) => (
+      {filteredData.map((bill, id) => (
         <Link
-          key={index}
+          key={id}
           href={{
             pathname: '/(billsToPay)/detail/',
             params: { ...bill, is_paid: bill.is_paid ? 'true' : 'false' },

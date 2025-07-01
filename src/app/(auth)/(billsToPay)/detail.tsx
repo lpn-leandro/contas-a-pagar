@@ -37,7 +37,7 @@ export default function BillDetails() {
             className='text-white m-auto text-base'
             onPress={() => {
               router.navigate({
-                pathname: '/(billsToPay)/editBill/',
+                pathname: '/(auth)/(billsToPay)/editBill/',
                 params: { id: bill?.id, title: bill?.title },
               });
             }}
