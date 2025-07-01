@@ -55,7 +55,7 @@ export default function registerUser() {
               password === passwordVerification
             ) {
               console.log('Usuário registrado:', { name, email, password });
-              router.replace('/home/');
+              router.replace('(auth)/(billsToPay)/home/');
             } else {
               console.log('Inserir informações válidas');
             }

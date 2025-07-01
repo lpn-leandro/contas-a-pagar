@@ -1,5 +1,5 @@
 import React from 'react';
-import { Slot, Stack } from 'expo-router';
+import { Stack } from 'expo-router';
 
 export default function _layout() {
   return (
@@ -15,6 +15,12 @@ export default function _layout() {
         options={{
           title: 'Novo usuário',
           headerShown: true,
+        }}
+      />
+      <Stack.Screen
+        name='(auth)'
+        options={{
+          headerShown: false,
         }}
       />
     </Stack>
