@@ -8,12 +8,26 @@ Projeto desenvolvido para atividades da UTFPR - Guarapuava, Curso de Sistemas pa
 
 ### ✅ Funcionalidades Básicas
 
-- [ ] Cadastro de contas a pagar
-- [ ] Listagem de contas com vencimentos
-- [ ] Edição e exclusão de contas
-- [ ] Marcar conta como paga
+- [x] Cadastro de contas a pagar
+- [x] Listagem de contas com vencimentos
+- [x] Edição e exclusão de contas
+- [x] Marcar conta como paga
 - [ ] Alerta de contas vencidas ou próximas do vencimento
 - [ ] Autenticação de usuários
+
+### 📋 Resumo de PR's
+
+- **Setup sqlite database** - [#11](https://github.com/lpn-leandro/contas-a-pagar/pull/11)
+- **Define tabs navigation** - [#10](https://github.com/lpn-leandro/contas-a-pagar/pull/10)
+- **User register page** - [#9](https://github.com/lpn-leandro/contas-a-pagar/pull/9)
+- **Defined editBill page** - [#8](https://github.com/lpn-leandro/contas-a-pagar/pull/8)
+- **Bills Detail** - [#7](https://github.com/lpn-leandro/contas-a-pagar/pull/7)
+- **Bills register** - [#6](https://github.com/lpn-leandro/contas-a-pagar/pull/6)
+- **Change folder structure on home page** - [#5](https://github.com/lpn-leandro/contas-a-pagar/pull/5)
+- **Upgrade expo version** - [#4](https://github.com/lpn-leandro/contas-a-pagar/pull/4)
+- **Bills to pay page** - [#3](https://github.com/lpn-leandro/contas-a-pagar/pull/3)
+- **Defined Login Page** - [#2](https://github.com/lpn-leandro/contas-a-pagar/pull/2)
+- **Setup Dependencies** - [#1](https://github.com/lpn-leandro/contas-a-pagar/pull/1)
 
 ### 🌟 Funcionalidades Futuras / Melhorias
 
