@@ -17,6 +17,7 @@ Projeto desenvolvido para atividades da UTFPR - Guarapuava, Curso de Sistemas pa
 
 ### 📋 Resumo de PR's
 
+- **defined environment for generate APK** - [#12](https://github.com/lpn-leandro/contas-a-pagar/pull/12)
 - **Setup sqlite database** - [#11](https://github.com/lpn-leandro/contas-a-pagar/pull/11)
 - **Define tabs navigation** - [#10](https://github.com/lpn-leandro/contas-a-pagar/pull/10)
 - **User register page** - [#9](https://github.com/lpn-leandro/contas-a-pagar/pull/9)
