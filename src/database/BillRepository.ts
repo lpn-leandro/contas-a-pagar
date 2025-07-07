@@ -53,4 +53,27 @@ export default class BillRepository {
     const result = await db.getAllAsync<Bill>('SELECT * FROM bills');
     return result;
   }
+
+  public async getById(id: number): Promise<Bill | null> {
+    const result = await db.getFirstAsync<Bill>(
+      'SELECT * FROM bills WHERE id = ?;',
+      [id]
+    );
+    return result || null;
+  }
+
+  public async update(id: number, bill: Bill): Promise<boolean> {
+    const result = await db.runAsync(
+      'UPDATE bills SET title = ?, value = ?, is_paid = ?, due_date = ?, description = ? WHERE id = ?;',
+      [
+        bill.title,
+        bill.value,
+        bill.is_paid ? 1 : 0,
+        bill.due_date instanceof Date ? bill.due_date.getTime() : bill.due_date,
+        bill.description,
+        id,
+      ]
+    );
+    return result.changes > 0;
+  }
 }

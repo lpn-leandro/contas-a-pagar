@@ -1,21 +1,35 @@
-import { View, Text, TouchableOpacity } from 'react-native';
-import React from 'react';
+import { View, Text, TouchableOpacity, Alert } from 'react-native';
+import React, { useState, useEffect } from 'react';
 import { router, Stack, useGlobalSearchParams } from 'expo-router';
 import HeaderWithHamburguer from '../../../components/headers/HeaderWithHamburguer';
-import { data } from '../../../../mocks/data';
 import FormButton from '../../../components/form/FormButton';
+import BillRepository, { Bill } from '../../../database/BillRepository';
+
+const repository = new BillRepository();
 
 export default function BillDetails() {
   const { id } = useGlobalSearchParams();
+  const [bill, setBill] = useState<Bill>();
 
-  // Find the bill by id
-  const bill = data.find((item) => String(item.id) === String(id));
+  useEffect(() => {
+    loadBill();
+  }, [id]);
+
+  const loadBill = async () => {
+    const foundBill = await repository.getById(Number(id));
+
+    if (foundBill) setBill(foundBill);
+  };
+
+  if (!bill) {
+    return;
+  }
 
   return (
     <View className='m-5'>
       <Stack.Screen
         options={{
-          title: 'Bill',
+          title: 'Detalhes da Conta',
           headerRight: () => (
             <HeaderWithHamburguer
               title=''
@@ -27,47 +41,50 @@ export default function BillDetails() {
         }}
       />
 
-      <Text className='text-center font-semibold text-xl'>
-        {bill?.title ?? 'N/A'}
+      <Text className='text-center font-semibold text-xl mb-4'>
+        {bill.title}
       </Text>
 
-      <View className=''>
-        <TouchableOpacity className='mt-4 bg-[#0F172A] rounded-md h-[2.5rem] w-[20%] max-h-[50%]'>
-          <Text
-            className='text-white m-auto text-base'
-            onPress={() => {
-              router.navigate({
-                pathname: '/(auth)/(billsToPay)/editBill/',
-                params: { id: bill?.id, title: bill?.title },
-              });
-            }}
-          >
+      <View className='mb-4'>
+        <TouchableOpacity
+          className='bg-[#0F172A] rounded-md h-[2.5rem] w-[20%] justify-center'
+          onPress={() => {
+            router.navigate({
+              pathname: '/(auth)/(billsToPay)/editBill/',
+              params: { id: bill.id?.toString() },
+            });
+          }}
+        >
+          <Text className='text-white text-center text-base font-semibold'>
             EDITAR
           </Text>
         </TouchableOpacity>
       </View>
 
-      <View className=''>
-        <Text className='font-semibold text-base'>Descrição</Text>
-        <Text className=''>{bill?.description ?? 'N/A'}</Text>
-        <View className='flex-wrap flex-row mt-4 justify-stretch gap-[10%]'>
-          <View className=''>
-            <Text className='font-semibold text-base'>Valor</Text>
-            <Text>R$ {bill?.value ?? 'N/A'}</Text>
-          </View>
-          <View className=''>
-            <Text className='font-semibold text-base'>Data de Vencimento</Text>
-            <Text>{bill?.due_date ?? 'N/A'}</Text>
-          </View>
+      <View className='mb-6'>
+        <Text className='font-semibold text-base mb-2'>Descrição</Text>
+        <Text className='text-gray-700'>{bill.description}</Text>
+      </View>
+
+      <View className='flex-row justify-between mb-6'>
+        <View className='flex-1 mr-4'>
+          <Text className='font-semibold text-base mb-1'>Valor: </Text>
+          <Text className='text-lg font-bold text-green-600'>
+            R$ {bill.value}
+          </Text>
+        </View>
+        <View className='flex-1'>
+          <Text className='font-semibold text-base mb-1'>
+            Data de Vencimento
+          </Text>
+          <Text className='text-lg'>
+            {bill.due_date.toString().substring(0, 10)}
+          </Text>
         </View>
       </View>
-      <View>
-        <FormButton
-          title='MARCAR COMO PAGO'
-          onPress={() => {
-            // Marcar como pago
-          }}
-        />
+
+      <View className=''>
+        <FormButton title='MARCAR COMO PAGO' />
       </View>
     </View>
   );

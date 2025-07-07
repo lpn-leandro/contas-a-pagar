@@ -45,10 +45,10 @@ export default function BillList({ statusFilter = 'all' }: BillListProps) {
 
       {bills.map((bill, id) => (
         <Link
-          key={id}
+          key={bill.id}
           href={{
             pathname: '/(billsToPay)/detail/',
-            params: { id, is_paid: bill.is_paid ? 'true' : 'false' },
+            params: { id: bill.id, is_paid: bill.is_paid ? 'true' : 'false' },
           }}
           asChild
         >
