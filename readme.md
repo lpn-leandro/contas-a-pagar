@@ -17,6 +17,7 @@ Projeto desenvolvido para atividades da UTFPR - Guarapuava, Curso de Sistemas pa
 
 ### 📋 Resumo de PR's
 
+- **defined environment for generate APK** - [#12](https://github.com/lpn-leandro/contas-a-pagar/pull/12)
 - **Setup sqlite database** - [#11](https://github.com/lpn-leandro/contas-a-pagar/pull/11)
 - **Define tabs navigation** - [#10](https://github.com/lpn-leandro/contas-a-pagar/pull/10)
 - **User register page** - [#9](https://github.com/lpn-leandro/contas-a-pagar/pull/9)
@@ -75,6 +76,10 @@ Esse repositório se trata de um aplicativo para o projeto, desenvolvido com as 
 2.  No terminal, inicie o expo com o comando:
 
         `npx expo start`
+
+3.  Para gerar uma APK para Android, execute o comando:
+
+    `$ eas build -p android --local --profile apk`
 
 ---
 
