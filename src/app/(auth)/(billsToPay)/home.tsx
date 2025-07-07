@@ -16,7 +16,7 @@ export default function home() {
         cancelButtonIndex={2}
       />
       <BillList statusFilter='unpaid' />
-      <View className='w-[60%] absolute bottom-[20%] left-[20%] right-[20%]'>
+      <View className='w-[60%] relative left-[20%] right-[20%] bottom-0'>
         <FormButton
           title='NOVA CONTA'
           onPress={() => {
