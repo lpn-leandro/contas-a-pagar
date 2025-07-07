@@ -76,6 +76,10 @@ Esse repositório se trata de um aplicativo para o projeto, desenvolvido com as 
 
         `npx expo start`
 
+3.  Para gerar uma APK para Android, execute o comando:
+
+    `$ eas build -p android --local --profile apk`
+
 ---
 
 ### Observações:

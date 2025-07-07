@@ -19,7 +19,9 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "versionCode": 1,
+      "package": "com.lpn.contasapagarapp"
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -29,6 +31,12 @@
       "expo-router",
       "expo-sqlite"
     ],
-    "scheme": "contas-a-pagar"
+    "scheme": "contas-a-pagar",
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "0e3ef405-fcaa-4939-8d53-e9ac68346bc7"
+      }
+    }
   }
 }
